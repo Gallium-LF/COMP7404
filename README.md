@@ -28,3 +28,19 @@ Based on the BSDS500 dataset, the images are first converted to grayscale and re
 - **(e) Motion Blur and AWG Noise (σ = 0.01)**  
   - Motion blur is applied based on the method described in **[21]**.  
   - AWG noise with **σ = 0.01** is introduced.
+
+## Direct Deblurring
+
+We implemented two distinct methods for image deblurring: **Gradient Descent** and **Fourier-based deblurring**. While both approaches successfully restored sharpness to the blurred images, they also introduced certain artifacts that required attention in the second stage of processing.
+
+### Method Comparison
+
+- `deblur_gd.py`: Implements the **gradient descent** method.
+- `deblur_fl.py`: Implements the **Fourier-based** method.
+
+After evaluating the results, our group chose the **gradient descent method** due to its overall better performance.
+
+### Batch Processing
+
+The script `deblur_final.py` was used to apply the gradient descent-based method to a batch of images.  
+All output images—including those containing deblurring artifacts—are stored in the `deblur_with_artifact` folder.
