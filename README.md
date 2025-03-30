@@ -47,7 +47,7 @@ All output images—including those containing deblurring artifacts—are stored
 
 # MLP
 
-基于多层感知机（MLP）实现图像去模糊，包含训练、推理与评估全流程。
+Image deblurring is achieved based on a multi-layer perceptron (MLP), including the entire process of training, reasoning, and evaluation.
 
 ## Data structure
 
